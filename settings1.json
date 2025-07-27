@@ -1,0 +1,92 @@
+{
+    "DHT1": {
+        "simulated": true,
+        "pin": 17,
+        "name": "RDHT1",
+        "runs_on": "PI1",
+        "influxdb_field": "measurement",
+        "influxdb_bucket": "measurements"
+    },
+    "DHT2": {
+        "simulated": true,
+        "pin": 1,
+        "name": "RDHT2",
+        "runs_on": "PI1",
+        "influxdb_field": "measurement",
+        "influxdb_bucket": "measurements"
+    },
+    "UDS1": {
+        "simulated": true,
+        "trig_pin": 23,
+        "echo_pin": 24,
+        "name": "DUS1",
+        "runs_on": "PI1",
+        "influxdb_field": "measurement",
+        "influxdb_bucket": "measurements"
+    },
+    "DS1": {
+        "simulated": true,
+        "port": 17,
+        "name": "BUTTON1",
+        "runs_on": "PI1",
+         "influxdb_field": "measurement",
+        "influxdb_bucket": "measurements"
+    },
+    "DB": {
+        "simulated": true,
+        "pin": 11,
+        "name": "Buzzer",
+        "runs_on": "PI1",
+        "influxdb_field": "measurement",
+        "influxdb_bucket": "measurements"
+       
+    },
+    "DL": {
+        "simulated": true,
+        "pin": 18,
+        "name": "LED",
+        "runs_on": "PI1",
+        "influxdb_field": "measurement",
+        "influxdb_bucket": "measurements"
+    },
+    "RPIR1": {
+        "simulated": true,
+        "pin": 2,
+        "name": "RPIR1",
+        "runs_on": "PI1",
+        "influxdb_field": "measurement",
+        "influxdb_bucket": "measurements"
+    },
+    "RPIR2": {
+        "simulated": true,
+        "pin": 4, 
+        "name": "RPIR2",
+        "runs_on": "PI1",
+        "influxdb_field": "measurement",
+        "influxdb_bucket": "measurements"
+    },
+    "DPIR1": {
+        "simulated": true,
+        "pin": 12,
+        "name": "DPIR1",
+        "runs_on": "PI1",
+        "influxdb_field": "measurement",
+        "influxdb_bucket": "measurements"
+    },
+    "DMS": {
+        "simulated": true,
+        "name": "DMS",
+        "R1": 25,
+        "R2": 8,
+        "R3": 7,
+        "R4": 1,
+        "C1": 12,
+        "C2": 16,
+        "C3": 20,
+        "C4": 21,
+        "runs_on": "PI1",
+        "influxdb_field": "measurement",
+        "influxdb_bucket": "measurements"
+  }
+
+}

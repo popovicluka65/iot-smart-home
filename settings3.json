@@ -1,0 +1,53 @@
+{
+    "RPIR4": {
+        "simulated": true,
+        "pin": 2,
+        "name": "RPIR4",
+        "runs_on": "PI3",
+        "influxdb_field": "measurement",
+        "influxdb_bucket": "measurements"
+    },
+    "DHT4": {
+        "simulated": true,
+        "pin": 17,
+        "name": "RDHT4",
+        "runs_on": "PI3",
+        "influxdb_field": "measurement",
+        "influxdb_bucket": "measurements"
+    },
+    "BB": {
+        "simulated": true,
+        "pin": 11,
+        "name": "Buzzer2",
+        "runs_on": "PI3",
+        "influxdb_field": "measurement",
+        "influxdb_bucket": "measurements"
+    },
+    "B4SD": {
+        "name": "B4SD",
+        "simulated": true,
+        "segments": [11,4,23,8,7,10,18,25],
+        "digits": [22,27,17,24],
+        "runs_on": "PI3",
+        "influxdb_field": "measurement",
+        "influxdb_bucket": "measurements"
+      },
+    "BIR": {
+        "name": "BIR",
+        "simulated": true,
+        "pin": 13,
+        "runs_on": "PI3",
+        "influxdb_field": "measurement",
+        "influxdb_bucket": "measurements"
+      },
+    "BRGB": {
+        "name": "BRGB",
+        "simulated": true,
+        "red_pin": 16,
+        "blue_pin": 12,
+        "green_pin": 26,
+        "runs_on": "PI3",
+        "influxdb_field": "measurement",
+        "influxdb_bucket": "measurements"
+    }
+}

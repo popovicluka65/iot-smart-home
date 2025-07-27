@@ -1,0 +1,69 @@
+{
+    "DS2": {
+        "simulated": true,
+        "port": 17,
+        "name": "BUTTON2",
+        "runs_on": "PI2",
+        "influxdb_field": "measurement",
+        "influxdb_bucket": "measurements"
+    },
+    "UDS2": {
+        "simulated": true,
+        "trig_pin": 23,
+        "echo_pin": 24,
+        "name": "DUS2",
+        "runs_on": "PI2",
+        "influxdb_field": "measurement",
+        "influxdb_bucket": "measurements"
+    },
+    "DPIR2": {
+        "simulated": true,
+        "pin": 12,
+        "name": "DPIR2",
+        "runs_on": "PI2",
+        "influxdb_field": "measurement",
+        "influxdb_bucket": "measurements"
+    },
+    "GDHT": {
+        "simulated": true,
+        "pin": 17,
+        "name": "GDHT",
+        "runs_on": "PI2",
+        "influxdb_field": "measurement",
+        "influxdb_bucket": "measurements"
+    },
+    "RPIR3": {
+        "simulated": true,
+        "pin": 2,
+        "name": "RPIR3",
+        "runs_on": "PI2",
+        "influxdb_field": "measurement",
+        "influxdb_bucket": "measurements"
+    },
+    "DHT3": {
+        "simulated": true,
+        "pin": 1,
+        "name": "RDHT3",
+        "runs_on": "PI2",
+        "influxdb_field": "measurement",
+        "influxdb_bucket": "measurements"
+    },
+    
+    "GLCD": { 
+        "simulated": true,
+        "pin_rs": 25,
+        "pin_e": 24,
+        "pins_db":  [23, 17, 21, 22],
+        "name": "GLCD",
+        "runs_on": "PI2",
+        "influxdb_field": "measurement",
+        "influxdb_bucket": "measurements"
+    },
+    "GSG": {
+        "simulated": true,
+        "name": "GSG",
+        "runs_on": "PI2",
+        "influxdb_field": "measurement",
+        "influxdb_bucket": "measurements"
+  }
+}

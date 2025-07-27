@@ -1,0 +1,25 @@
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #221f1f;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  height: 50px; /* Postavljanje visine na 50px */
+}
+
+button {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+/* Stil za logo ili naslov u mat-toolbar-u */
+.logo {
+  font-size: 24px;
+}

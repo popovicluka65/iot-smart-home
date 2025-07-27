@@ -1,0 +1,94 @@
+<h2 style="font-family: Arial, sans-serif; color: #333; display: flex; align-items: center; gap: 8px;">
+  <span>🕒</span> B4SD Vreme:
+</h2>
+<p style="
+    font-size: 1.2rem;
+    color: #555;
+    background: #e1f0ff;
+    padding: 12px 25px;
+    border-radius: 10px;
+    max-width: 220px;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 0 3px 8px rgba(0,123,255,0.2);
+    ">
+  {{ time || 'Nema podataka' }}
+</p>
+
+<h2>ALARM</h2>
+<iframe src="http://localhost:3000/d-solo/de8zji87xq6f4f/iot?orgId=1&from=1753481970464&to=1753482201776&timezone=browser&panelId=25&__feature.dashboardSceneSolo" width="450" height="200" frameborder="0"></iframe>
+<div class="people-count">
+  <h3>Trenutno ljudi u objektu: {{ peopleCount }}</h3>
+</div>
+
+<button (click)="turnOffAlarm()" class="alarm-off-btn">
+  ❌ Isključi alarm
+</button>
+
+
+<div class="custom-snackbar" [class.show]="buzzerSnackbarVisible">
+  🔔 Buzzer je aktiviran!
+  <button (click)="hideSnackbar()">Zatvori</button>
+</div>
+
+<div class="lcd-display">
+  <h2>LCD Prikaz</h2>
+  <p *ngIf="temperature !== null">Temperatura: {{ temperature }} °C</p>
+  <p *ngIf="humidity !== null">Vlažnost: {{ humidity }} %</p>
+  <p *ngIf="temperature === null && humidity === null">Nema podataka</p>
+</div>
+
+
+<div class="dms-container">
+  <h2>Unesite PIN za alarm</h2>
+
+  <input type="password"
+         maxlength="4"
+         [(ngModel)]="pinCode"
+         placeholder="****"
+         class="pin-input" />
+
+  <button (click)="sendPin()">Potvrdi PIN</button>
+
+  <p *ngIf="message">{{ message }}</p>
+</div>
+
+<div class="rgb-section">
+  <h3>BRGB kontrola sijalice</h3>
+
+  <div class="rgb-buttons">
+    <button
+      *ngFor="let color of availableColors"
+      (click)="setRgbColor(color)"
+      [ngClass]="{'active': currentColor === color}">
+      {{ color | uppercase }}
+    </button>
+  </div>
+
+  <p>Trenutna boja: <strong>{{ currentColor }}</strong></p>
+</div>
+
+<div class="alarm-settings">
+  <h3>⏰ Podešavanje budilnika</h3>
+
+  <label for="alarm-date">Datum:</label>
+  <input id="alarm-date" type="date" [(ngModel)]="alarmDate">
+
+  <label for="alarm-time">Vreme:</label>
+  <input id="alarm-time" type="time" [(ngModel)]="alarmTimeSet">
+
+  <button (click)="setClockAlarm()">Podesi budilnik</button>
+
+  <p>{{ message }}</p>
+</div>
+
+<div class="alarm-off">
+  <h3>🛑 Isključi budilnik</h3>
+  <button (click)="turnClockAlarmOff()">Isključi budilnik</button>
+</div>
+
+<div *ngIf="alarmSnackbarVisible" class="custom-snackbar show">
+  {{ message }}
+  <button (click)="turnClockAlarmOff()" *ngIf="message.includes('Alarm')">Isključi alarm</button>
+<!--  <button (click)="hideSnackbar()">Zatvori</button>-->
+</div>
