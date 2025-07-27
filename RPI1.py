@@ -58,7 +58,7 @@ if __name__ == "__main__":
         #5
         #run_pir(dpir1_settings, threads, stop_event, events["dpir-dl"])
 
-        #6 ima al ne radi
+        #6 ima
         run_keyboard(kb_settings, threads, stop_event)
         #7,8 rpir1 ima al ne radi
         #run_pir(rpir1_settings, threads, stop_event)

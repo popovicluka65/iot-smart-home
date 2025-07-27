@@ -90,20 +90,12 @@ if __name__ == "__main__":
         infrared_settings = settings['BIR']
         rgb_settings = settings['BRGB']
 
-        #1 ima al ne radi
+       
         #run_pir(rpir4_settings, threads, stop_event)
-        #2 ima al ne radi
         #run_dht(dht4_settings, threads, stop_event)
-        #3 ima      
-        
-
-        #4 ima
         #run_b4sd(b4sd_settings, threads, stop_event, b4sd_queue, bb_queue, alarm_clock_on_event, alarm_clock_off_event)
-
         #run_buzzer(bb_settings, threads, stop_event,alarm_on_event, bb_queue,  alarm_clock_on_event, alarm_clock_off_event)
-        #5
         #run_infrared(infrared_settings, threads, stop_event,bir_rgb_event,bir_rgb_mappings,rgb_queue)
-        #6 prepraviti posle
         run_rgb(rgb_settings, threads, stop_event, rgb_queue,bir_rgb_event)
     
         run_user_input_thread(rgb_queue, stop_event, threads)

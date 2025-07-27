@@ -12,7 +12,7 @@
 ### 1. Clone the Repository
 
 ```bash
-git clone git@github.com:kzi-nastava/iot-2024-group-1-team-4.git
+git clone git@github.com:popovicluka65/iot-smart-home.git
 ```
 
 ---
